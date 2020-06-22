@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.example.module.dao.MultiThreadInsertProblemDao" >
+
+    <resultMap id="MultiThreadInsertProblemResult" type="org.example.module.po.MultiThreadInsertProblemPo">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+    </resultMap>
+
+    <insert id="insert" parameterType="org.example.module.po.MultiThreadInsertProblemPo">
+        INSERT INTO multi_thread_insert_problem(id,a_name)
+        VALUES(#{id},#{name})
+    </insert>
+</mapper>
